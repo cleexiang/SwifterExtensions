@@ -154,3 +154,9 @@ public extension UIApplication {
         return once
     }
 }
+
+public extension UITableViewCell {
+    class var ResuseIdentifier: String {
+        return String(describing: self)
+    }
+}
