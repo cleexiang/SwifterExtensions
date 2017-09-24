@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0ABC54E01F7757580095DC4C /* CoreGraphicsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABC54DD1F7757580095DC4C /* CoreGraphicsExtensions.swift */; };
+		0ABC54E11F7757580095DC4C /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABC54DE1F7757580095DC4C /* FoundationExtensions.swift */; };
+		0ABC54E21F7757580095DC4C /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABC54DF1F7757580095DC4C /* UIKitExtensions.swift */; };
 		C9A243F91F729111004AC1E8 /* SwifterExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A243EF1F729111004AC1E8 /* SwifterExtensions.framework */; };
 		C9A243FE1F729111004AC1E8 /* SwifterExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A243FD1F729111004AC1E8 /* SwifterExtensionsTests.swift */; };
 		C9A244001F729111004AC1E8 /* SwifterExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = C9A243F21F729111004AC1E8 /* SwifterExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,6 +26,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0ABC54DD1F7757580095DC4C /* CoreGraphicsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreGraphicsExtensions.swift; sourceTree = "<group>"; };
+		0ABC54DE1F7757580095DC4C /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
+		0ABC54DF1F7757580095DC4C /* UIKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
 		C9A243EF1F729111004AC1E8 /* SwifterExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwifterExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9A243F21F729111004AC1E8 /* SwifterExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwifterExtensions.h; sourceTree = "<group>"; };
 		C9A243F31F729111004AC1E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +56,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0ABC54DC1F7757580095DC4C /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0ABC54DD1F7757580095DC4C /* CoreGraphicsExtensions.swift */,
+				0ABC54DE1F7757580095DC4C /* FoundationExtensions.swift */,
+				0ABC54DF1F7757580095DC4C /* UIKitExtensions.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		C9A243E51F729111004AC1E8 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +87,7 @@
 		C9A243F11F729111004AC1E8 /* SwifterExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				0ABC54DC1F7757580095DC4C /* Sources */,
 				C9A243F21F729111004AC1E8 /* SwifterExtensions.h */,
 				C9A243F31F729111004AC1E8 /* Info.plist */,
 			);
@@ -196,6 +213,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ABC54E11F7757580095DC4C /* FoundationExtensions.swift in Sources */,
+				0ABC54E01F7757580095DC4C /* CoreGraphicsExtensions.swift in Sources */,
+				0ABC54E21F7757580095DC4C /* UIKitExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +396,7 @@
 		C9A244071F729111004AC1E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LZ7KAN3586;
 				INFOPLIST_FILE = SwifterExtensionsTests/Info.plist;
@@ -390,6 +411,7 @@
 		C9A244081F729111004AC1E8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LZ7KAN3586;
 				INFOPLIST_FILE = SwifterExtensionsTests/Info.plist;
