@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71BD4A281F7F7697006F6619 /* CoreGraphicsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BD4A251F7F7697006F6619 /* CoreGraphicsExtensions.swift */; };
+		71BD4A291F7F7697006F6619 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BD4A261F7F7697006F6619 /* FoundationExtensions.swift */; };
+		71BD4A2A1F7F7697006F6619 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BD4A271F7F7697006F6619 /* UIKitExtensions.swift */; };
 		C9A243F91F729111004AC1E8 /* SwifterExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A243EF1F729111004AC1E8 /* SwifterExtensions.framework */; };
 		C9A243FE1F729111004AC1E8 /* SwifterExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A243FD1F729111004AC1E8 /* SwifterExtensionsTests.swift */; };
 		C9A244001F729111004AC1E8 /* SwifterExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = C9A243F21F729111004AC1E8 /* SwifterExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,6 +26,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		71BD4A251F7F7697006F6619 /* CoreGraphicsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreGraphicsExtensions.swift; sourceTree = "<group>"; };
+		71BD4A261F7F7697006F6619 /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
+		71BD4A271F7F7697006F6619 /* UIKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
 		C9A243EF1F729111004AC1E8 /* SwifterExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwifterExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9A243F21F729111004AC1E8 /* SwifterExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwifterExtensions.h; sourceTree = "<group>"; };
 		C9A243F31F729111004AC1E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +56,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		71BD4A241F7F7697006F6619 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				71BD4A251F7F7697006F6619 /* CoreGraphicsExtensions.swift */,
+				71BD4A261F7F7697006F6619 /* FoundationExtensions.swift */,
+				71BD4A271F7F7697006F6619 /* UIKitExtensions.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		C9A243E51F729111004AC1E8 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +87,7 @@
 		C9A243F11F729111004AC1E8 /* SwifterExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				71BD4A241F7F7697006F6619 /* Sources */,
 				C9A243F21F729111004AC1E8 /* SwifterExtensions.h */,
 				C9A243F31F729111004AC1E8 /* Info.plist */,
 			);
@@ -196,6 +213,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71BD4A291F7F7697006F6619 /* FoundationExtensions.swift in Sources */,
+				71BD4A281F7F7697006F6619 /* CoreGraphicsExtensions.swift in Sources */,
+				71BD4A2A1F7F7697006F6619 /* UIKitExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +396,7 @@
 		C9A244071F729111004AC1E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LZ7KAN3586;
 				INFOPLIST_FILE = SwifterExtensionsTests/Info.plist;
@@ -390,6 +411,7 @@
 		C9A244081F729111004AC1E8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LZ7KAN3586;
 				INFOPLIST_FILE = SwifterExtensionsTests/Info.plist;
