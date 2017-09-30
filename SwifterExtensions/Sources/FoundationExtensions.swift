@@ -60,7 +60,7 @@ public extension FileManager {
 
 public extension Bool {
     /// Converts Bool to Int.
-    public public var toInt: Int { return self ? 1 : 0}
+    public var toInt: Int { return self ? 1 : 0}
     
     /// Toggle boolean value.
     public mutating func toggle() -> Bool {
