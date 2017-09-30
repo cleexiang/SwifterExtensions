@@ -29,6 +29,7 @@
 		71BD4A251F7F7697006F6619 /* CoreGraphicsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreGraphicsExtensions.swift; sourceTree = "<group>"; };
 		71BD4A261F7F7697006F6619 /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
 		71BD4A271F7F7697006F6619 /* UIKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
+		71BD4A2B1F7F77C4006F6619 /* SwifterExtensions.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = SwifterExtensions.podspec; sourceTree = "<group>"; };
 		C9A243EF1F729111004AC1E8 /* SwifterExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwifterExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9A243F21F729111004AC1E8 /* SwifterExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwifterExtensions.h; sourceTree = "<group>"; };
 		C9A243F31F729111004AC1E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,6 +70,7 @@
 		C9A243E51F729111004AC1E8 = {
 			isa = PBXGroup;
 			children = (
+				71BD4A2B1F7F77C4006F6619 /* SwifterExtensions.podspec */,
 				C9A243F11F729111004AC1E8 /* SwifterExtensions */,
 				C9A243FC1F729111004AC1E8 /* SwifterExtensionsTests */,
 				C9A243F01F729111004AC1E8 /* Products */,
