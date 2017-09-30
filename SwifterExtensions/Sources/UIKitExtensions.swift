@@ -11,70 +11,81 @@ import UIKit
 /*
  usage: screen.width, screen.height
  */
-extension UIScreen {
-    static var width: CGFloat { return UIScreen.main.bounds.size.width }
-    static var height: CGFloat { return UIScreen.main.bounds.size.height }
+public extension UIScreen {
+    public static var width: CGFloat { return UIScreen.main.bounds.size.width }
+    public static var height: CGFloat { return UIScreen.main.bounds.size.height }
 }
 
-extension UIColor {
-    convenience init(_ r: CGFloat, _ g: CGFloat, _ b: CGFloat, _ alpha: CGFloat = 1.0) {
+public extension UIColor {
+    public convenience init(_ r: CGFloat, _ g: CGFloat, _ b: CGFloat, _ alpha: CGFloat = 1.0) {
         self.init(red: r/255.0, green: g/255.0, blue: b/255.0, alpha: alpha)
     }
 }
 
+public extension UITableViewCell {
+    public class var ResuseIdentifier: String {
+        return String(describing: self)
+    }
+}
+
+public extension UICollectionReusableView {
+    public class var ResuseIdentifier: String {
+        return String(describing: self)
+    }
+}
 /*
  useage: view.x, view.y, view.width, view.height
  */
-extension UIView {
+public extension UIView {
     
-    var x: CGFloat {
+    public var x: CGFloat {
         return self.frame.origin.x
     }
     
-    var y: CGFloat {
+    public var y: CGFloat {
         return self.frame.origin.y
     }
     
-    var width: CGFloat {
+    public var width: CGFloat {
         return self.frame.size.width
     }
     
-    var height: CGFloat {
+    public var height: CGFloat {
         return self.frame.size.height
     }
 }
 
-extension UIView {
+public extension UIView {
     /// Add border
     ///
     /// - Parameters:
     ///   - borderWidth: width of border
     ///   - borderColor: color of border
-    func addBorder(borderWidth: CGFloat = 1, borderColor: UIColor = UIColor.clear) {
+    public func addBorder(borderWidth: CGFloat = 1, borderColor: UIColor = UIColor.clear) {
         self.layer.borderWidth = borderWidth
         self.layer.borderColor = borderColor.cgColor
     }
     
-    func addShadow(shadowOffset: CGSize = CGSize(width: 0, height: 0), shadowColor: UIColor = UIColor.black.withAlphaComponent(0.5), shadowRadius: CGFloat = 5, shadowOpacity: Float = 1.0) {
+    public func addShadow(shadowOffset: CGSize = CGSize(width: 0, height: 0), shadowColor: UIColor = UIColor.black.withAlphaComponent(0.5), shadowRadius: CGFloat = 5, shadowOpacity: Float = 1.0) {
         self.layer.shadowOffset = shadowOffset
         self.layer.shadowColor = shadowColor.cgColor
         self.layer.shadowRadius = shadowRadius
         self.layer.shadowOpacity = shadowOpacity
     }
     
-    func addSubviews(_ views: [UIView]) {
+    public func addSubviews(_ views: [UIView]) {
         views.forEach { addSubview($0) }
     }
     
-    func addSubviews(_ views: UIView...) {
+    public func addSubviews(_ views: UIView...) {
         views.forEach { addSubview($0) }
     }
     
-    func removeAllSubviews() {
+    public func removeAllSubviews() {
         subviews.forEach { $0.removeFromSuperview()}
     }
     
-    func setBgImage(image: UIImage, transparent: Bool = true) {
+    public func setBgImage(image: UIImage, transparent: Bool = true) {
         self.layer.contents = image.cgImage
         if transparent {
             self.layer.backgroundColor = UIColor.clear.cgColor
@@ -82,8 +93,8 @@ extension UIView {
     }
 }
 
-extension UIAlertController {
-    class func showAlert(_ msg: String = "", title: String = "", confirmButtonTitle: String = "Done", base: UIViewController?) {
+public extension UIAlertController {
+    public class func showAlert(_ msg: String = "", title: String = "", confirmButtonTitle: String = "确定", base: UIViewController?) {
         var basevc = base
         if basevc == nil {
             basevc = UIApplication.shared.keyWindow?.rootViewController
@@ -99,7 +110,7 @@ extension UIAlertController {
         basevc?.present(alert, animated: true, completion: nil)
     }
     
-    class func showAlert(_ msg: String = "", title: String = "", cancelButtonTitle: String = "Cancel", confirmButtonTitle: String = "Done", base: UIViewController? = nil, confirmAction:@escaping ()->(), cancelAction:@escaping ()->()) {
+    public class func showAlert(_ msg: String = "", title: String = "", cancelButtonTitle: String = "取消", confirmButtonTitle: String = "确定", base: UIViewController? = nil, confirmAction:@escaping ()->(), cancelAction:@escaping ()->()) {
         var basevc = base
         if basevc == nil {
             basevc = UIApplication.shared.keyWindow?.rootViewController
@@ -123,26 +134,26 @@ extension UIAlertController {
     }
 }
 
-extension UIEdgeInsets {
+public extension UIEdgeInsets {
     public init(_ top: CGFloat, _ left: CGFloat, _ bottom: CGFloat, _ right: CGFloat) {
         self.init(top: top, left: left, bottom: bottom, right: right)
     }
 }
 
-extension UIApplication {
+public extension UIApplication {
     
     /// 当前应用是否是扩展
-    class func isAppExtension() -> Bool {
+    public class func isAppExtension() -> Bool {
         return Bundle.main.executablePath!.contains(".appex")
     }
     
     /// 判断当前是否在UnitTest模式下运行
-    class func isRunningUnitTests() -> Bool {
+    public class func isRunningUnitTests() -> Bool {
         return ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil
     }
     
     /// App是否正在调试中
-    class func isAppUnderDebugging() -> Bool {
+    public class func isAppUnderDebugging() -> Bool {
         let once: Bool = {
             var info = kinfo_proc()
             var mib: [Int32] = [CTL_KERN, KERN_PROC, KERN_PROC_PID, getpid()]
@@ -154,3 +165,4 @@ extension UIApplication {
         return once
     }
 }
+
