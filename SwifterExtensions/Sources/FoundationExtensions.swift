@@ -99,3 +99,17 @@ public extension String {
     }
 }
 
+public extension Date {
+    public func longStyleString() -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        return formatter.string(from: self)
+    }
+    
+    public func shortStyleString() -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        return formatter.string(from: self)
+    }
+}
+
