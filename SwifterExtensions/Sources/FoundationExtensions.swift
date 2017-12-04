@@ -9,6 +9,18 @@
 import Foundation
 
 public extension Bundle {
+    public class func bundleIdentifier() -> String? {
+        return Bundle.main.bundleIdentifier
+    }
+    
+    public class func versionNumber() -> String? {
+        return Bundle.main.infoDictionary?["CFBundleVersion"] as? String
+    }
+    
+    public class func buildVersionNumber() -> String? {
+        return Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+    }
+    
     public class func mainBundlePath(_ withFileName: String) -> String? {
         return Bundle.main.path(forResource: withFileName, ofType: nil)
     }
@@ -37,6 +49,11 @@ public extension FileManager {
     
     public class func cache(_ path: String) -> String {
         let dir = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first!
+        return dir.appendingFormat("/%@", path)
+    }
+    
+    public class func applicationSupport(_ path: String) -> String {
+        let dir = NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory, .userDomainMask, true).first!
         return dir.appendingFormat("/%@", path)
     }
     
