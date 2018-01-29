@@ -33,6 +33,17 @@ public extension UICollectionReusableView {
         return String(describing: self)
     }
 }
+
+public extension UIImage {
+    convenience init(view: UIView) {
+        UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.isOpaque, 0.0)
+        view.drawHierarchy(in: view.bounds, afterScreenUpdates: false)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        self.init(cgImage: (image?.cgImage)!)
+    }
+}
+
 /*
  useage: view.x, view.y, view.width, view.height
  */
@@ -61,9 +72,10 @@ public extension UIView {
     /// - Parameters:
     ///   - borderWidth: width of border
     ///   - borderColor: color of border
-    public func addBorder(borderWidth: CGFloat = 1, borderColor: UIColor = UIColor.clear) {
+    public func addBorder(borderWidth: CGFloat = 1, borderColor: UIColor = UIColor.clear, cornerRadius: CGFloat = 0) {
         self.layer.borderWidth = borderWidth
         self.layer.borderColor = borderColor.cgColor
+        self.layer.cornerRadius = cornerRadius
     }
     
     public func addShadow(shadowOffset: CGSize = CGSize(width: 0, height: 0), shadowColor: UIColor = UIColor.black.withAlphaComponent(0.5), shadowRadius: CGFloat = 5, shadowOpacity: Float = 1.0) {

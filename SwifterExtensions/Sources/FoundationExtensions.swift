@@ -102,13 +102,13 @@ public extension String {
 public extension Date {
     public func longStyleString() -> String {
         let formatter = DateFormatter()
-        formatter.dateStyle = .long
+        formatter.dateFormat = "yyyy-MM-dd"
         return formatter.string(from: self)
     }
     
     public func shortStyleString() -> String {
         let formatter = DateFormatter()
-        formatter.dateStyle = .short
+        formatter.dateFormat = "MM-dd"
         return formatter.string(from: self)
     }
 }
