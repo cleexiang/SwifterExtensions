@@ -22,6 +22,13 @@ public extension Bundle {
         path?.append("/\(withFileName)")
         return path
     }
+    
+    public class func identifier() -> String {
+        guard let bundleIdentifier = Bundle.main.bundleIdentifier else {
+            return ""
+        }
+        return bundleIdentifier
+    }
 }
 
 public extension FileManager {
@@ -63,6 +70,7 @@ public extension Bool {
     public var toInt: Int { return self ? 1 : 0}
     
     /// Toggle boolean value.
+    @discardableResult
     public mutating func toggle() -> Bool {
         self = !self
         return self
