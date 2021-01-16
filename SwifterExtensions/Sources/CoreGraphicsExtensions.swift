@@ -8,25 +8,25 @@
 
 import Foundation
 
-public extension CGPoint {
+extension CGPoint {
     /*
      Simplest init (x, y)
      */
-    public init(_ x: CGFloat, _ y: CGFloat) {
+    init(_ x: CGFloat, _ y: CGFloat) {
         self.init(x: x, y:y)
     }
 }
 
-public extension CGRect {
+extension CGRect {
     /*
      Simplest init (x, y , width, height)
      */
-    public init(_ x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat) {
+    init(_ x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat) {
         self.init(x: x, y: y, width: width, height: height)
     }
     
     /// X value of CGRect's origin
-    public var x: CGFloat {
+    var x: CGFloat {
         get {
             return self.origin.x
         } set(value) {
@@ -35,7 +35,7 @@ public extension CGRect {
     }
     
     /// Y value of CGRect's origin
-    public var y: CGFloat {
+    var y: CGFloat {
         get {
             return self.origin.y
         } set(value) {
@@ -44,7 +44,7 @@ public extension CGRect {
     }
     
     /// Width of CGRect's size
-    public var w: CGFloat {
+    var w: CGFloat {
         get {
             return self.size.width
         } set(value) {
@@ -53,7 +53,7 @@ public extension CGRect {
     }
     
     /// Height of CGRect's size
-    public var h: CGFloat {
+    var h: CGFloat {
         get {
             return self.size.height
         } set(value) {
@@ -62,30 +62,30 @@ public extension CGRect {
     }
 }
 
-public extension CGFloat {
-    public func toRadians() -> CGFloat {
+extension CGFloat {
+    func toRadians() -> CGFloat {
         return (.pi * self) / 180.0
     }
-    public func toDegrees() -> CGFloat {
+    func toDegrees() -> CGFloat {
         return (180 * self) / .pi
     }
     
     @discardableResult
-    public mutating func mutateToRadians() -> CGFloat {
+    mutating func mutateToRadians() -> CGFloat {
         self = (.pi * self) / 180.0
         return self
     }
     
     @discardableResult
-    public mutating func mutateToDegrees() -> CGFloat {
+    mutating func mutateToDegrees() -> CGFloat {
         self = (180 * self) / .pi
         return self
     }
 }
 
-public extension CGSize {
+extension CGSize {
     /// Simplest init (width, height)
-    public init(_ width: CGFloat, _ height: CGFloat) {
+    init(_ width: CGFloat, _ height: CGFloat) {
         self.init(width: width, height: height)
     }
     
