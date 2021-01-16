@@ -28,14 +28,14 @@ platform :ios do
       allow_warnings: true,
       use_libraries: true
     )
-    version = version_bump_podspec(path: "#{project}.podspec")
+    version = version_bump_podspec(path: "SwifterExtensions.podspec")
     git_commit(path: "./*.podspec", message: "Bumped to version #{version}")
     add_git_tag(tag: version)
     push_to_git_remote(remote_branch: "master", force: false, tags: true)
     # changelog = changelog_from_git_commits
     # sh("git fetch --tags")
     pod_push(
-      path: "#{project}.podspec",
+      path: "SwifterExtensions.podspec",
       allow_warnings: true, 
       use_libraries: true,
       # 跳过验证 pod 是否可以导入
