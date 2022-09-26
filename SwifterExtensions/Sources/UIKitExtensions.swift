@@ -11,30 +11,30 @@ import UIKit
 /*
  usage: screen.width, screen.height
  */
-extension UIScreen {
+public extension UIScreen {
     static var width: CGFloat { return UIScreen.main.bounds.size.width }
     static var height: CGFloat { return UIScreen.main.bounds.size.height }
 }
 
-extension UIColor {
+public extension UIColor {
     convenience init(_ r: CGFloat, _ g: CGFloat, _ b: CGFloat, _ alpha: CGFloat = 1.0) {
         self.init(red: r/255.0, green: g/255.0, blue: b/255.0, alpha: alpha)
     }
 }
 
-extension UITableViewCell {
+public extension UITableViewCell {
     class var ResuseIdentifier: String {
         return String(describing: self)
     }
 }
 
-extension UICollectionReusableView {
+public extension UICollectionReusableView {
     class var ResuseIdentifier: String {
         return String(describing: self)
     }
 }
 
-extension UIImage {
+public extension UIImage {
     convenience init(view: UIView) {
         UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.isOpaque, 0.0)
         view.drawHierarchy(in: view.bounds, afterScreenUpdates: false)
@@ -47,7 +47,7 @@ extension UIImage {
 /*
  useage: view.x, view.y, view.width, view.height
  */
-extension UIView {
+public extension UIView {
     
     var x: CGFloat {
         return self.frame.origin.x
@@ -66,7 +66,7 @@ extension UIView {
     }
 }
 
-extension UIView {
+public extension UIView {
     /// Add border
     ///
     /// - Parameters:
@@ -105,7 +105,7 @@ extension UIView {
     }
 }
 
-extension UIAlertController {
+public extension UIAlertController {
     class func showAlert(_ msg: String = "", title: String = "", confirmButtonTitle: String = "确定", base: UIViewController?) {
         var basevc = base
         if basevc == nil {
@@ -146,13 +146,13 @@ extension UIAlertController {
     }
 }
 
-extension UIEdgeInsets {
+public extension UIEdgeInsets {
     init(_ top: CGFloat, _ left: CGFloat, _ bottom: CGFloat, _ right: CGFloat) {
         self.init(top: top, left: left, bottom: bottom, right: right)
     }
 }
 
-extension UIApplication {
+public extension UIApplication {
     
     /// 当前应用是否是扩展
     class func isAppExtension() -> Bool {

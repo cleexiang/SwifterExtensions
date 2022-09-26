@@ -8,16 +8,16 @@
 
 import Foundation
 
-extension CGPoint {
+public extension CGPoint {
     /*
      Simplest init (x, y)
      */
-    init(_ x: CGFloat, _ y: CGFloat) {
+    public init(_ x: CGFloat, _ y: CGFloat) {
         self.init(x: x, y:y)
     }
 }
 
-extension CGRect {
+public extension CGRect {
     /*
      Simplest init (x, y , width, height)
      */
@@ -62,7 +62,7 @@ extension CGRect {
     }
 }
 
-extension CGFloat {
+public extension CGFloat {
     func toRadians() -> CGFloat {
         return (.pi * self) / 180.0
     }
@@ -83,7 +83,7 @@ extension CGFloat {
     }
 }
 
-extension CGSize {
+public extension CGSize {
     /// Simplest init (width, height)
     init(_ width: CGFloat, _ height: CGFloat) {
         self.init(width: width, height: height)
