@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SwifterExtensions'
-  s.version          = '1.0.7'
+  s.version          = '1.0.8'
   s.summary          = 'A collection of extensions used for Swift.'
   s.description      = "A collection of extensions written in Swift 4, compatible with iOS 11 and xCode 9."
   s.homepage         = 'https://github.com/cleexiang/SwifterExtensions'
